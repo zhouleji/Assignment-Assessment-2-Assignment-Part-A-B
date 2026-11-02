@@ -1,6 +1,6 @@
 # Recipe Management System
 
-COMP2021 Software Development Practice – Assignment Part A.
+COMP2021 Software Development Practice – Assignment Parts A and B.
 
 A terminal recipe manager. Recipes are loaded from `data/recipes.json` with the supplied `RecipeLoader`, and all of the collection logic is in `RecipeManagement.Core/RecipeManager.cs`.
 
@@ -11,8 +11,9 @@ A terminal recipe manager. Recipes are loaded from `data/recipes.json` with the 
 - `RecipeManagement.Tests` – xUnit tests
   - `RecipeManagerTests.cs` – supplied example tests
   - `PartATests.cs` – Part A tests (catalogue, shopping list, cooking plan, removed stack, instruction queue, workflow)
+  - `PartBTests.cs` – Part B tests (title/ingredient search, protein report, saved recipes, workflow)
 
-## Collections used (Part A)
+## Collections used
 
 | Role | Collection |
 | --- | --- |
@@ -21,8 +22,9 @@ A terminal recipe manager. Recipes are loaded from `data/recipes.json` with the 
 | Cooking plan | `LinkedList<int>` |
 | Removed recipe history | `Stack<int>` |
 | Cooking instructions | `Queue<string>` |
+| Saved recipes (Part B) | `HashSet<int>` |
 
-Part B members (menu options 15–21) are not implemented yet and show a "Not implemented" message.
+Part B searches and the protein report use LINQ. See `Design.md` for the saved-recipe collection choice and the complexity table.
 
 ## Requirements
 
